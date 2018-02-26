@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="juegos_plataformas_action" name="plataformas"
+                     res_model="juegos.plataformas" />
+
+         <menuitem name="plataformas" id="menu_plataformas" action="juegos_plataformas_action" parent="menu_inicio" sequence="17"/>
+
+
+        <record id="juegos_plataformas_view_tree" model="ir.ui.view">
+            <field name="name">Lista plataformas</field>
+            <field name="model">juegos.plataformas</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="codigo" />
+                    <field name="plataforma" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="juegos_plataformas_view_form" model="ir.ui.view">
+            <field name="name">Formulario de plataformas</field>
+            <field name="model">juegos.plataformas</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="codigo" />
+                        <field name="plataforma" />
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="juegos_plataformas_view_search" model="ir.ui.view">
+            <field name="name">Busqueda plataformas</field>
+            <field name="model">juegos.plataformas</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="codigo" />
+                    <field name="plataforma" />
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

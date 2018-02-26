@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="juegos_consolas_action" name="consolas"
+                     res_model="juegos.consolas" />
+
+        <menuitem name="Consolas" id="menu_consolas" action="juegos_consolas_action" parent="menu_inicio" sequence="20"/>
+
+
+        <record id="juegos_consolas_view_tree" model="ir.ui.view">
+            <field name="name">Lista consolas</field>
+            <field name="model">juegos.consolas</field>
+            <field name="arch" type="xml">
+
+                <tree>
+
+                    <field name="plataforma" />
+                    <field name="consola" />
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="juegos_consolas_view_form" model="ir.ui.view">
+            <field name="name">Formulario de consolas</field>
+            <field name="model">juegos.consolas</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="limpiar" type="object" string="Limpia" class="oe_highlight" />
+                        <button name="limpia_todo" type="object" string="Limpia todo" class="oe_highlight" />
+
+
+                    </header>
+                    <group>
+                    <field name="plataforma" />
+                    <field name="consola" />
+
+
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="juegos_juegos_view_search" model="ir.ui.view">
+            <field name="name">Busqueda consolas</field>
+            <field name="model">juegos.consolas</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="plataforma" />
+                    <field name="consola" />
+
+
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>
